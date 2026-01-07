@@ -50,9 +50,3 @@ tar -czvf nginx-compiled.tar nginx/
 	[Install]
 	WantedBy=multi-user.target
 ```
-
-	springdoc:
-	  api-docs:
-	    enabled: false
-	  swagger-ui:
-	    enabled: false
