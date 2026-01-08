@@ -4,5 +4,5 @@ Cara penggunaan :
 * * * * * script/perintah yang dijalankan
 ```
 
-Keterangan:
+Keterangan: 
 asd

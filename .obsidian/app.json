@@ -3,6 +3,6 @@
   "smartIndentList": true,
   "showLineNumber": true,
   "autoPairMarkdown": true,
-  "useTab": true,
+  "useTab": false,
   "vimMode": false
 }
