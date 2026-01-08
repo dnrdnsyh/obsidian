@@ -1,8 +1,6 @@
 Digunakan untuk scheduler.
 #### **Cara penggunaan :**
-```
-* * * * * script/perintah yang dijalankan
-```
+`* * * * * script/perintah yang dijalankan`
 
 #### **Keterangan:** 
 **Bintang ke-**		**Deskripsi**				**Rentang Nilai**
