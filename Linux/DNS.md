@@ -5,13 +5,13 @@ Contoh:
 
 Ketika ping atau akses *iconpln.co.id* akan diarahkan ke 192.168.56.24
 
-**Update sistem dan install bind9**
+#### **Update sistem dan install bind9**
 ```
 sudo apt update
 sudo apt install bind9 bind9utils bind9-doc -y
 ```
 
-**Konfigurasi File Options**
+#### **Konfigurasi File Options**
 agar DNS Server bisa forward query ke DNS Publik (Contoh 8.8.8.8) jika domain tidak ditemukan di lokal.
 Edit file `sudo /etc/bind/named.conf.options`
 
@@ -23,6 +23,23 @@ forwarders {
 };
 ```
 
-Konfigurasi Zone Lokal
+#### **Konfigurasi Zone Lokal**
 Perlu mendefinisikan zona untuk domain baru. 
 edit file `sudo /etc/bind/named.conf.local`
+
+```
+// Forward Zone (Domain ke IP)
+zone "iconpln.co.id" {
+    type master;
+    file "/etc/bind/db.iconpln.co.id";
+};
+
+// Reverse Zone (IP ke Domain)
+zone "56.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.192";
+};
+```
+
+#### **Membuat File Database Forward**
+Copy template file db
