@@ -3,7 +3,11 @@ Cara penggunaan :
 ```
 * * * * * script/perintah yang dijalankan
 ```
-    '
-asd '
+
 Keterangan: 
-asd
+Bintang ke-		Deskripsi				Rentang Nilai
+1						Menit
+2						Jam
+3						Tanggal
+4						Bulan
+5						Hari
