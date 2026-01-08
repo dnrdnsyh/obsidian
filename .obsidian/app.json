@@ -1,3 +1,8 @@
 {
-  "spellcheck": false
+  "spellcheck": false,
+  "smartIndentList": true,
+  "showLineNumber": true,
+  "autoPairMarkdown": true,
+  "useTab": true,
+  "vimMode": false
 }
