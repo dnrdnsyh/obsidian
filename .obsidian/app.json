@@ -4,5 +4,6 @@
   "showLineNumber": true,
   "autoPairMarkdown": true,
   "useTab": false,
-  "vimMode": false
+  "vimMode": false,
+  "readableLineLength": false
 }
