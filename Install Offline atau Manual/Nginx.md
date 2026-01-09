@@ -52,3 +52,6 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 ```
+
+Tambahkan sbin nginx ke sbin sistem agar sistem dapat menjalankan perintah seperti `nginx -t`
+`sudo update-alternatives --install /usr/sbin/nginx nginx /opt/nginx/sbin/nginx 1`
