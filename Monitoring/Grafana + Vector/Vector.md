@@ -1,44 +1,62 @@
-#1. Unduh file instalasi Vector versi terbaru
-wget https://packages.timber.io/vector/0.34.1/vector_0.34.1-1_amd64.deb
+#1. Tambahkan GPG Key
+`curl -L https://apt.vector.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/vector-archive-keyring.gpg > /dev/null`
 
-#2. Instal file tersebut
-sudo dpkg -i vector_0.34.1-1_amd64.deb
+#2. Tambahkan Repository ke Sources List
+`echo "deb [signed-by=/usr/share/keyrings/vector-archive-keyring.gpg] https://apt.vector.dev stable main" | sudo tee /etc/apt/sources.list.d/vector.list`
 
-#3. Jika ada error dependensi (jarang terjadi), perbaiki dengan:
-sudo apt-get install -f
+#3. Update dan Install
+```
+sudo apt-get update
+sudo apt-get install vector -y
 
-Verifikasi versi
 vector --version
+```
 
-Edit konfig : sudo nano /etc/vector/vector.yaml
+Tambahkan konfig ini di `sudo nano /etc/vector/vector.yaml`:
+```
+data_dir: "/var/lib/vector"
 
-Tambahkan konfig ini:
 sources:
-  host_metrics:
-    type: host_metrics
-    collectors: [cpu, mem, disk, network]
+  my_host_metrics:
+    type: "host_metrics"
+    namespace: "node"
+    collectors:
+      - cpu
+      - memory
+      - disk
+      - network
+      - load
+      - cgroups
+      - filesystem
+      - host
     scrape_interval_secs: 15
-  docker_metrics:
-    type: docker_metrics
 
 sinks:
   prom_exporter:
-    type: prometheus_exporter
-    inputs: [host_metrics, docker_metrics]
+    type: "prometheus_exporter"
+    inputs: ["my_host_metrics"]
     address: "0.0.0.0:9090"
+```
+
 
 
 Cara untuk batasi resource, Jalankan perintah ini untuk membuat _override_ konfigurasi service 
-sudo systemctl edit vector
+`sudo systemctl edit vector`
 
 Tambahkan konfig ini:
+```
 [Service]
 MemoryMax=50M
 MemoryHigh=40M
-
+```
 Jalankan service:
+```
 sudo systemctl daemon-reload
 sudo systemctl restart vector
 sudo systemctl enable vector
 
 curl http://localhost:9090/metrics
+```
+
+Catatan:
+Sesuaikan Json node exporter agar bisa terbaca.
