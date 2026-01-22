@@ -1,6 +1,4 @@
 OLAP = Aplikasi
-
-
 70 truno
 10.70.1.48
 10.70.1.49
