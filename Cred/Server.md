@@ -100,3 +100,9 @@ http://10.71.1.111/zabbix/
 admin
 sysadmin123
 ```
+
+# KUMA
+```
+http://10.71.1.107:3001/dashboard
+sysadmin
+```
