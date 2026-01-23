@@ -3,6 +3,10 @@
 `10.14.204.23 - VM-Airtax-DB1`
 ![[Pasted image 20260123220315.png]]
 
+`10.14.204.88 - vm-airtax-apps08`
+![[Pasted image 20260123215911.png]]
+
+
 `10.14.204.24 - VM-Airtax_kafka01`
 ![[Pasted image 20260123214344.png]]
 
@@ -33,8 +37,7 @@
 `10.14.204.87 - vm-airtax-apps07`
 ![[Pasted image 20260123215834.png]]
 
-`10.14.204.88 - vm-airtax-apps08`
-![[Pasted image 20260123215911.png]]
+
 
 `10.14.204.89 - vm-airtax-kafka05`
 ![[Pasted image 20260123215943.png]]
