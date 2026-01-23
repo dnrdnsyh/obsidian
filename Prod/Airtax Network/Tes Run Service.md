@@ -16,10 +16,13 @@
 
 # After
 `10.68.35.42 - VM-Airtax-Apps01`
-![[Pasted image 20260124004945.png]]
+![[Pasted image 20260124045606.png]]
+![[Pasted image 20260124045835.png]]
 
 `10.14.204.23 - VM-Airtax-DB1`
-![[Pasted image 20260124005557.png]]
+![[Pasted image 20260124045928.png]]
+![[Pasted image 20260124050648.png]]
 
 `10.14.204.88 - vm-airtax-apps08
-![[Pasted image 20260124005004.png]]
+![[Pasted image 20260124050721.png]]
+![[Pasted image 20260124050759.png]]
