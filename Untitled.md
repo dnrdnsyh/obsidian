@@ -40,7 +40,6 @@ Deploy Development:
   stage: deploy_development
   script:
     - echo "Mulai Deploy RTR Instansi Vertikal"
-	- scp env/.env root@10.99.248.77:/root/rtr/instansi-vertikal/.env
     - kubectl -n rtr-development create configmap rtr-instansi-vertikal --from-env-file=.env --dry-run=client -o yaml | kubectl apply -f -
     - kubectl apply -f kubernetes/rtr-instansi-vertikal-dev.yaml
     - kubectl replace --force -f kubernetes/rtr-instansi-vertikal-dev.yaml
