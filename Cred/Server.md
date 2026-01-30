@@ -112,3 +112,12 @@ sysadmin123
 http://10.71.1.107:3001/dashboard
 sysadmin
 ```
+
+# Proxmox
+```
+https://10.71.1.120:8006/
+root/V@964e0ck^V!yZ*uoUG
+https://10.14.152.240:8006/
+root/Pr0xmoxSupeR&^%
+```
+
