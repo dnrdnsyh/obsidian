@@ -121,3 +121,9 @@ https://10.14.152.240:8006/
 root/Pr0xmoxSupeR&^%
 ```
 
+# Signoz
+```
+http://10.14.211.187:8080
+herlambang.aqilrafianda@iconpln.co.id
+topclass@991
+```
